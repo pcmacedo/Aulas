@@ -1,0 +1,29 @@
+<html>
+<style>
+	.conteudo{
+	width:400px;
+	border: solid 1px gray;
+	}
+</style>
+<div class="conteudo">
+	<h1>Cálculo total de aulas</h1>
+	<label>Nome</label>
+	<input name="nome" type="text" id="nome"><br>
+	<label>Valor Hora/Aula</label>
+	<input name="valor" type="text" id="valor"><br>
+	<label>Total de horas semanais</label>
+	<input name="horas" type="text" id="horas"><br>
+	<p id="total"></p>
+	<button onclick="calcular()">Calcular</button>
+</div>
+<script type="text/javascript">
+function calcular(){
+var nome=document.getElementById("nome").value;
+var valor=document.getElementById("valor").value;
+var horas=document.getElementById("horas").value;
+var total=parseInt(horas)*parseInt(valor);
+document.getElementById("total").innerHTML=
+nome+",recebeu nessa semana:"+ total;
+}
+</script>
+</html>
